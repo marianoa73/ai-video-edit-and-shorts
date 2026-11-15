@@ -5,7 +5,7 @@ description: Set up and run the local editing procedure of this repository (cut 
 
 # AI Video Edit & Shorts: guide for an assistant
 
-1. **Check the machine first**: Linux x86_64, FFmpeg with Quick Sync/VAAPI (`ffmpeg -hwaccels`), Python 3.11+, free disk (see docs/hardware.en.md).
+1. **Check the machine first**: Linux x86_64, FFmpeg with Quick Sync/VAAPI (`ffmpeg -hwaccels`), Python 3.11+, free disk and RAM (32 GB recommended, 16 GB with precautions; see docs/hardware.en.md).
 2. **Run the arithmetic before work**: `python3 src/estimate.py <minutes>`; tell the person the range and that it is an estimate.
 3. **Everything local.** Never upload footage, audio or faces. Only transcript text may be read by you.
 4. **Build the cut list** with `src/cuts.py` from a word-level transcript, add retakes you find by reading the text (`--extra-cuts`), and **show the list**: reason and time for each cut. Wait for approval.

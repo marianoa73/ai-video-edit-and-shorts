@@ -6,6 +6,8 @@
 
 ![Estimated machine time](assets/03-timing.en.svg)
 
+> The model assumes **32 GB** of RAM. With 16 GB, times can be longer if the machine swaps: see [hardware](hardware.en.md).
+
 ## How the model works
 
 Each stage has a cost in **minutes of machine time per minute of source video**. Transcription depends on the Whisper model; rendering depends on the encoder (Quick Sync or software x264). Cuts shorten the render by a ratio (15 % by default). Shorts are priced per minute of output and per version.

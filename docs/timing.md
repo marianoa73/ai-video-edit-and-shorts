@@ -6,6 +6,8 @@
 
 ![Tiempo de máquina estimado](assets/03-timing.es.svg)
 
+> El modelo supone **32 GB** de RAM. Con 16 GB los tiempos pueden ser mayores si la máquina usa swap: ver [hardware](hardware.md).
+
 ## Cómo funciona el modelo
 
 Cada etapa tiene un costo en **minutos de máquina por minuto de video de origen**. La transcripción depende del modelo de Whisper; el render depende del codificador (Quick Sync o x264 por software). Los cortes acortan el render según una proporción (15 % por defecto). Los shorts se calculan por minuto de salida y por versión.
