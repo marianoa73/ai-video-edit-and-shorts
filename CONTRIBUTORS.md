@@ -8,8 +8,8 @@
 |---|---|---|
 | Mariano Araujo | Author, design decisions, review and publication / Autor, decisiones de diseño, revisión y publicación | active / activo |
 | Claude (Anthropic) | Design, documentation, diagrams, reference tools and tests / Diseño, documentación, diagramas, herramientas de referencia y pruebas | active / activo |
-| Codex (OpenAI) | Code and tests that are better delegated, always with fictional data / Código y pruebas que conviene delegar, siempre con datos ficticios | used when needed / se usa cuando hace falta |
-| OpenRouter / OpenCode | Short questions and second opinions on public content / Preguntas cortas y segunda opinión sobre contenido público | occasional, may grow / ocasional, puede crecer |
+| [Codex](https://github.com/codex) (OpenAI) | Research and source review behind the design; code and tests that are better delegated, always with fictional data / Investigación y revisión de fuentes detrás del diseño; código y pruebas que conviene delegar, siempre con datos ficticios | used when needed / se usa cuando hace falta |
+| OpenRouter / OpenCode | Short questions, comparisons and second opinions on public content during the research / Preguntas cortas, comparaciones y segunda opinión sobre contenido público durante la investigación | occasional, may grow / ocasional, puede crecer |
 
 Names of AI products belong to their owners; this project is not affiliated with or endorsed by them. / Los nombres de los productos de IA pertenecen a sus dueños; este proyecto no está afiliado a ellos ni respaldado por ellos.
 
