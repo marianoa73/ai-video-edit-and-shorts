@@ -2,8 +2,6 @@
 
 <p align="center">
 <a href="README.es.md"><img src="docs/assets/btn-es.svg?v=4" height="44" alt="Ver en Español"></a>
-&nbsp;
-<a href="https://marianoa73.github.io/ai-video-edit-and-shorts/"><img src="docs/assets/btn-site-en.svg?v=4" height="44" alt="Interactive page (EN / ES)"></a>
 </p>
 
 > *Private, local editing: from one raw 4K take to a clean video and its shorts.*

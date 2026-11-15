@@ -2,8 +2,6 @@
 
 <p align="center">
 <a href="README.md"><img src="docs/assets/btn-en.svg?v=4" height="44" alt="View in English"></a>
-&nbsp;
-<a href="https://marianoa73.github.io/ai-video-edit-and-shorts/?lang=es"><img src="docs/assets/btn-site-es.svg?v=4" height="44" alt="Página interactiva (ES / EN)"></a>
 </p>
 
 > *Edición privada y local: de una toma 4K cruda a un video limpio y sus shorts.*
