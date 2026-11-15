@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "status": "estimates",
+  "reference": {
+    "en": "Mini PC, 10th-gen Intel U-series CPU (4 cores / 8 threads), 32 GB RAM, NVMe SSD, integrated GPU with Quick Sync, no discrete GPU. Source: 4K30 phone video, one speaker.",
+    "es": "Mini PC, CPU Intel serie U de 10.ª generación (4 núcleos / 8 hilos), 32 GB de RAM, SSD NVMe, GPU integrada con Quick Sync, sin GPU dedicada. Origen: video 4K30 de celular, una sola persona."
+  },
+  "unit": "minutes of machine time per minute of source video, as [low, typical, high]",
+  "whisper": {"small": [0.25, 0.4, 0.6], "medium": [0.8, 1.1, 1.6], "large-v3": [2.5, 3.5, 5.0]},
+  "stages": {
+    "ingest":     {"per_min": [0.12, 0.20, 0.35], "label": {"en": "Probe, HDR to SDR, analysis proxy", "es": "Análisis, HDR a SDR, proxy de trabajo"}},
+    "audio_prep": {"per_min": [0.02, 0.03, 0.06], "label": {"en": "Audio extraction and denoise", "es": "Extracción y limpieza de audio"}},
+    "detect_cuts":{"per_min": [0.01, 0.02, 0.04], "label": {"en": "Silence, filler and repeat detection", "es": "Detección de silencios, muletillas y repeticiones"}},
+    "llm_review": {"per_min": [0.07, 0.15, 0.30], "label": {"en": "Assistant reads the transcript (retakes, short candidates)", "es": "El asistente lee la transcripción (tomas falladas, candidatos a short)"}},
+    "face_track": {"per_min": [0.15, 0.25, 0.45], "label": {"en": "Face tracking (sampled), for zooms and 9:16", "es": "Seguimiento de cara (muestreado), para zooms y 9:16"}}
+  },
+  "render": {"qsv": [0.30, 0.45, 0.70], "x264": [1.0, 1.4, 2.2]},
+  "render_extras": {
+    "zoom":      {"per_min": [0.05, 0.10, 0.20], "label": {"en": "Zoom and pan on the 4K frame", "es": "Zoom y paneo sobre el cuadro 4K"}},
+    "chroma":    {"per_min": [0.10, 0.20, 0.35], "label": {"en": "Green-screen background replacement", "es": "Reemplazo de fondo verde"}},
+    "subtitles": {"per_min": [0.03, 0.06, 0.12], "label": {"en": "Burned-in subtitles", "es": "Subtítulos impresos"}}
+  },
+  "shorts": {
+    "render_per_output_min": {"qsv": [1.5, 2.5, 4.0], "x264": [3.0, 5.0, 8.0]},
+    "labels": {"en": "Shorts rendering (9:16, all versions)", "es": "Render de shorts (9:16, todas las versiones)"}
+  },
+  "human_minutes": {
+    "cut_review": [5, 8, 15],
+    "short_review_each": [0.5, 1.0, 2.0]
+  }
+}

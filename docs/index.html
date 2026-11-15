@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Video Edit &amp; Shorts</title>
+<meta name="description" content="Private, local editing: from one raw 4K take to a clean video and its shorts. / Edición privada y local: de una toma 4K cruda a un video limpio y sus shorts.">
+<style>
+:root{--bg:#0F1115;--box:#202630;--fg:#EDF0F4;--muted:#BBC5D4;--accent:#FD5A02;--line:#2b3340}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html[data-lang="en"] [lang="es"],html[data-lang="es"] [lang="en"]{display:none!important}
+a{color:var(--accent)}
+header{position:sticky;top:0;z-index:5;background:rgba(15,17,21,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar{max-width:1100px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.2px;color:var(--fg);text-decoration:none}.brand b{color:var(--accent)}
+nav{display:flex;gap:14px;flex:1;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-size:15px}nav a:hover{color:var(--fg)}
+.lang{display:inline-flex;border:2px solid var(--accent);border-radius:999px;overflow:hidden}
+.lang button{background:transparent;color:var(--accent);border:0;padding:6px 16px;font:700 15px system-ui;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--bg)}
+main{max-width:1100px;margin:0 auto;padding:0 20px 60px}
+.hero{padding:56px 0 24px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.1;margin:0 0 12px}
+.hero p.lead{font-size:20px;color:var(--muted);max-width:760px;margin:0 0 22px}
+.tag{color:var(--accent);font-weight:700}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;border:2px solid var(--accent);font-weight:700;text-decoration:none}
+.btn.p{background:var(--accent);color:var(--bg)}
+section{padding:42px 0 6px}h2{font-size:28px;margin:0 0 14px}h2 small{color:var(--muted);font-weight:400;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:var(--box);border:1px solid var(--line);border-radius:14px;padding:16px 18px}.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:15.5px}
+figure{margin:18px 0}figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:var(--bg)}
+figcaption{color:var(--muted);font-size:14px;margin-top:6px}
+.note{border-left:4px solid var(--accent);background:var(--box);padding:12px 16px;border-radius:0 10px 10px 0;color:var(--muted)}
+.calc{background:var(--box);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;grid-template-columns:minmax(240px,320px) 1fr;gap:26px}
+@media(max-width:760px){.calc{grid-template-columns:1fr}}
+.calc label{display:block;margin:10px 0 4px;font-weight:600;font-size:15px}
+.calc input[type=range]{width:100%;accent-color:var(--accent)}
+.calc select,.calc input[type=number]{width:100%;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:7px}
+.calc .ck{display:flex;gap:8px;align-items:center;font-weight:400;margin:8px 0}
+.big{font-size:38px;font-weight:800;color:var(--accent);line-height:1.1}.sub{color:var(--muted);font-size:15px;margin:4px 0 14px}
+.row{display:grid;grid-template-columns:minmax(120px,230px) 1fr 80px;gap:10px;align-items:center;margin:5px 0;font-size:14px}
+.row .t{height:14px;background:#2b3340;border-radius:7px;position:relative;overflow:hidden}.row .t i{display:block;height:100%;background:#8a95a8;border-radius:7px}.row .t i.h{background:var(--accent)}
+.row span:last-child{text-align:right;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:10px 0}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}th{background:var(--box)}
+footer{border-top:1px solid var(--line);padding:26px 20px;color:var(--muted);text-align:center;font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<a class="brand" href="#top">AI Video <b>Edit</b> &amp; Shorts</a>
+<nav>
+<a href="#how"><span lang="en">How it works</span><span lang="es">Cómo funciona</span></a>
+<a href="#time"><span lang="en">Time</span><span lang="es">Tiempos</span></a>
+<a href="#hw"><span lang="en">Hardware</span><span lang="es">Hardware</span></a>
+<a href="#shorts"><span lang="en">Shorts</span><span lang="es">Shorts</span></a>
+<a href="#privacy"><span lang="en">Privacy</span><span lang="es">Privacidad</span></a>
+</nav>
+<div class="lang" role="group" aria-label="Language / Idioma">
+<button type="button" data-set="en" aria-pressed="true">EN</button><button type="button" data-set="es" aria-pressed="false">ES</button>
+</div>
+</div></header>
+<main id="top">
+<div class="hero">
+<h1 lang="en">From one raw 4K take<br>to a clean video <span class="tag">and its shorts</span></h1>
+<h1 lang="es">De una toma 4K cruda<br>a un video limpio <span class="tag">y sus shorts</span></h1>
+<p class="lead" lang="en">A reproducible design for cutting silences, filler words and repeats, adding subtitles, zooms and a green-screen background, and extracting shorts, on a small Linux box with a person approving every step that matters.</p>
+<p class="lead" lang="es">Un diseño reproducible para cortar silencios, muletillas y repeticiones, sumar subtítulos, zooms y fondo verde, y sacar shorts, en una caja Linux chica con una persona aprobando cada paso importante.</p>
+<div class="btns">
+<a class="btn p" href="https://github.com/marianoa73/ai-video-edit-and-shorts"><span lang="en">View on GitHub</span><span lang="es">Ver en GitHub</span></a>
+<a class="btn" href="https://github.com/marianoa73/ai-video-edit-and-shorts/blob/main/README.es.md" lang="en">README en español</a>
+<a class="btn" href="https://github.com/marianoa73/ai-video-edit-and-shorts/blob/main/README.md" lang="es">README in English</a>
+</div>
+</div>
+
+<section id="how">
+<h2 lang="en">How it works</h2><h2 lang="es">Cómo funciona</h2>
+<div class="cards">
+<div class="card"><h3 lang="en">1 · Record once</h3><h3 lang="es">1 · Grabar una vez</h3><p lang="en">One continuous 4K take, dropped in a shared folder. No manual cutting.</p><p lang="es">Una toma 4K continua, dejada en una carpeta compartida. Sin cortar a mano.</p></div>
+<div class="card"><h3 lang="en">2 · Cut list first</h3><h3 lang="es">2 · Primero la lista</h3><p lang="en">Silences, fillers, repeats and retakes become a list with a reason each. A person approves it.</p><p lang="es">Silencios, muletillas, repeticiones y tomas falladas pasan a una lista con su motivo. La aprueba una persona.</p></div>
+<div class="card"><h3 lang="en">3 · One render</h3><h3 lang="es">3 · Un solo render</h3><p lang="en">Cuts, zooms, background and subtitles in a single pass from the original: no quality lost.</p><p lang="es">Cortes, zooms, fondo y subtítulos en una sola pasada desde el original: sin pérdida de calidad.</p></div>
+<div class="card"><h3 lang="en">4 · Shorts</h3><h3 lang="es">4 · Shorts</h3><p lang="en">Candidates proposed, you approve, 9:16 reframe that follows the face; with and without subtitles.</p><p lang="es">Candidatos propuestos, vos aprobás, reencuadre 9:16 que sigue la cara; con y sin subtítulos.</p></div>
+</div>
+<figure><img lang="en" src="assets/01-pipeline.en.svg" alt="From a raw take to published files"><img lang="es" src="assets/01-pipeline.es.svg" alt="De una toma cruda a los archivos finales"></figure>
+<figure><img lang="en" src="assets/05-cuts.en.svg" alt="How cuts are decided"><img lang="es" src="assets/05-cuts.es.svg" alt="Cómo se deciden los cortes"></figure>
+</section>
+
+<section id="time">
+<h2 lang="en">How long it takes <small>estimates, not measurements</small></h2><h2 lang="es">Cuánto tarda <small>estimaciones, no mediciones</small></h2>
+<p class="note" lang="en">Try your own case. The numbers come from one model file and assume a mini PC with 4 cores / 8 threads, 32 GB and an integrated GPU, no discrete GPU. They are replaced with real measurements after the first prototype.</p>
+<p class="note" lang="es">Probá tu caso. Los números salen de un solo archivo de modelo y suponen un mini PC con 4 núcleos / 8 hilos, 32 GB y GPU integrada, sin GPU dedicada. Se reemplazan por mediciones reales después del primer prototipo.</p>
+<div class="calc">
+<div>
+<label for="min"><span lang="en">Source length</span><span lang="es">Duración del video</span>: <b id="minv">30</b> min</label>
+<input id="min" type="range" min="5" max="90" step="5" value="30">
+<label for="wh">Whisper</label>
+<select id="wh"><option>small</option><option selected>medium</option><option>large-v3</option></select>
+<label for="enc"><span lang="en">Encoder</span><span lang="es">Codificador</span></label>
+<select id="enc"><option value="qsv">Quick Sync (iGPU)</option><option value="x264">x264 (CPU)</option></select>
+<label for="sh"><span lang="en">Shorts (2 versions each)</span><span lang="es">Shorts (2 versiones c/u)</span></label>
+<input id="sh" type="number" min="0" max="12" value="5">
+<label class="ck"><input id="zoom" type="checkbox" checked> <span lang="en">Zoom and pan</span><span lang="es">Zoom y paneo</span></label>
+<label class="ck"><input id="chroma" type="checkbox"> <span lang="en">Green-screen background</span><span lang="es">Fondo verde</span></label>
+<label class="ck"><input id="subs" type="checkbox"> <span lang="en">Subtitles on the long video</span><span lang="es">Subtítulos en el video largo</span></label>
+</div>
+<div>
+<div class="big" id="tot">–</div>
+<div class="sub" id="rng"></div>
+<div id="bars"></div>
+</div>
+</div>
+<figure><img lang="en" src="assets/03-timing.en.svg" alt="Estimated machine time"><img lang="es" src="assets/03-timing.es.svg" alt="Tiempo de máquina estimado"></figure>
+</section>
+
+<section id="hw">
+<h2 lang="en">Hardware proposal</h2><h2 lang="es">Propuesta de hardware</h2>
+<p lang="en">A small x86 Linux machine is enough. A GPU is an optional upgrade, only if measurements justify it.</p>
+<p lang="es">Alcanza con una máquina Linux x86 chica. La GPU es una mejora opcional, sólo si las mediciones la justifican.</p>
+<figure><img lang="en" src="assets/02-hardware.en.svg" alt="Hardware and network"><img lang="es" src="assets/02-hardware.es.svg" alt="Hardware y red"></figure>
+</section>
+
+<section id="shorts">
+<h2 lang="en">Shorts and subtitles</h2><h2 lang="es">Shorts y subtítulos</h2>
+<figure><img lang="en" src="assets/04-shorts.en.svg" alt="From the long take to shorts"><img lang="es" src="assets/04-shorts.es.svg" alt="Del video largo a los shorts"></figure>
+<figure><img lang="en" src="assets/06-framing.en.svg" alt="Subtitle placement and safe zones"><img lang="es" src="assets/06-framing.es.svg" alt="Ubicación de subtítulos y zonas seguras"></figure>
+<table>
+<tr><th></th><th lang="en">Polished</th><th lang="es">Prolijo</th><th lang="en">Casual</th><th lang="es">Casual</th></tr>
+<tr><td lang="en">Use</td><td lang="es">Uso</td><td lang="en">technical talks</td><td lang="es">charlas técnicas</td><td lang="en">spontaneous videos</td><td lang="es">videos espontáneos</td></tr>
+<tr><td lang="en">Silences cut from</td><td lang="es">Silencios desde</td><td>0.6 s</td><td>1.2 s</td></tr>
+<tr><td lang="en">Zoom</td><td lang="es">Zoom</td><td lang="en">on key phrases</td><td lang="es">en frases clave</td><td lang="en">none or one slow</td><td lang="es">ninguno o uno lento</td></tr>
+</table>
+</section>
+
+<section id="privacy">
+<h2 lang="en">Privacy rules</h2><h2 lang="es">Reglas de privacidad</h2>
+<div class="cards">
+<div class="card"><h3 lang="en">Face and voice stay local</h3><h3 lang="es">Cara y voz quedan en local</h3><p lang="en">No cloud editor, transcription or upload.</p><p lang="es">Sin editores, transcripción ni subidas a la nube.</p></div>
+<div class="card"><h3 lang="en">Text only to an assistant</h3><h3 lang="es">Sólo texto a un asistente</h3><p lang="en">Only the transcript text may be read; a local model is possible.</p><p lang="es">Sólo se puede leer el texto de la transcripción; es posible un modelo local.</p></div>
+<div class="card"><h3 lang="en">Originals never deleted</h3><h3 lang="es">Originales intactos</h3><p lang="en">Removal only after a person confirms.</p><p lang="es">Se borran sólo cuando una persona confirma.</p></div>
+</div>
+</section>
+</main>
+<footer><span lang="en">MIT License · Author: Mariano Araujo ·</span><span lang="es">Licencia MIT · Autor: Mariano Araujo ·</span> <a href="https://github.com/marianoa73/ai-video-edit-and-shorts">GitHub</a></footer>
+
+<script type="application/json" id="model">{"version": 1, "status": "estimates", "reference": {"en": "Mini PC, 10th-gen Intel U-series CPU (4 cores / 8 threads), 32 GB RAM, NVMe SSD, integrated GPU with Quick Sync, no discrete GPU. Source: 4K30 phone video, one speaker.", "es": "Mini PC, CPU Intel serie U de 10.ª generación (4 núcleos / 8 hilos), 32 GB de RAM, SSD NVMe, GPU integrada con Quick Sync, sin GPU dedicada. Origen: video 4K30 de celular, una sola persona."}, "unit": "minutes of machine time per minute of source video, as [low, typical, high]", "whisper": {"small": [0.25, 0.4, 0.6], "medium": [0.8, 1.1, 1.6], "large-v3": [2.5, 3.5, 5.0]}, "stages": {"ingest": {"per_min": [0.12, 0.2, 0.35], "label": {"en": "Probe, HDR to SDR, analysis proxy", "es": "Análisis, HDR a SDR, proxy de trabajo"}}, "audio_prep": {"per_min": [0.02, 0.03, 0.06], "label": {"en": "Audio extraction and denoise", "es": "Extracción y limpieza de audio"}}, "detect_cuts": {"per_min": [0.01, 0.02, 0.04], "label": {"en": "Silence, filler and repeat detection", "es": "Detección de silencios, muletillas y repeticiones"}}, "llm_review": {"per_min": [0.07, 0.15, 0.3], "label": {"en": "Assistant reads the transcript (retakes, short candidates)", "es": "El asistente lee la transcripción (tomas falladas, candidatos a short)"}}, "face_track": {"per_min": [0.15, 0.25, 0.45], "label": {"en": "Face tracking (sampled), for zooms and 9:16", "es": "Seguimiento de cara (muestreado), para zooms y 9:16"}}}, "render": {"qsv": [0.3, 0.45, 0.7], "x264": [1.0, 1.4, 2.2]}, "render_extras": {"zoom": {"per_min": [0.05, 0.1, 0.2], "label": {"en": "Zoom and pan on the 4K frame", "es": "Zoom y paneo sobre el cuadro 4K"}}, "chroma": {"per_min": [0.1, 0.2, 0.35], "label": {"en": "Green-screen background replacement", "es": "Reemplazo de fondo verde"}}, "subtitles": {"per_min": [0.03, 0.06, 0.12], "label": {"en": "Burned-in subtitles", "es": "Subtítulos impresos"}}}, "shorts": {"render_per_output_min": {"qsv": [1.5, 2.5, 4.0], "x264": [3.0, 5.0, 8.0]}, "labels": {"en": "Shorts rendering (9:16, all versions)", "es": "Render de shorts (9:16, todas las versiones)"}}, "human_minutes": {"cut_review": [5, 8, 15], "short_review_each": [0.5, 1.0, 2.0]}}</script>
+<script src="estimator.js"></script>
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l,save){
+    if(l!=="en"&&l!=="es")l="en";
+    root.setAttribute("data-lang",l);root.setAttribute("lang",l);
+    document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.set===l));});
+    if(save){try{localStorage.setItem("lang",l);}catch(e){}}
+    var u=new URL(location.href);u.searchParams.set("lang",l);history.replaceState(null,"",u);
+    render();
+  }
+  var q=new URLSearchParams(location.search).get("lang"),saved=null;
+  try{saved=localStorage.getItem("lang");}catch(e){}
+  var start=q||saved||((navigator.language||"en").toLowerCase().indexOf("es")===0?"es":"en");
+  document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.set,true);});});
+  var model=JSON.parse(document.getElementById("model").textContent);
+  function $(id){return document.getElementById(id);}
+  function fmt(m){var r=Math.round(m),h=Math.floor(r/60),mm=r%60;return h?h+" h "+(mm<10?"0":"")+mm+" min":mm+" min";}
+  function render(){
+    var L=root.getAttribute("data-lang");
+    $("minv").textContent=$("min").value;
+    var r=window.estimate(model,{minutes:+$("min").value,whisper:$("wh").value,encoder:$("enc").value,zoom:$("zoom").checked,chroma:$("chroma").checked,subtitles:$("subs").checked,shorts:Math.max(0,+$("sh").value||0)});
+    var t=r.machine_minutes,h=r.human_minutes;
+    $("tot").textContent=fmt(t[1]);
+    $("rng").textContent=(L==="es"?"Rango ":"Range ")+fmt(t[0])+" – "+fmt(t[2])+(L==="es"?" sin supervisión, más ":" unattended, plus ")+fmt(h[1])+(L==="es"?" de revisión humana":" of human review");
+    var max=Math.max.apply(null,r.stages.map(function(s){return s.min[2];}));
+    $("bars").innerHTML=r.stages.map(function(s){
+      var hot=s.id==="transcribe"||s.id==="shorts";
+      return '<div class="row"><span>'+s.label[L]+'</span><span class="t"><i class="'+(hot?"h":"")+'" style="width:'+(s.min[1]/max*100).toFixed(1)+'%"></i></span><span>'+s.min[1].toFixed(1)+' min</span></div>';
+    }).join("");
+  }
+  ["min","wh","enc","sh","zoom","chroma","subs"].forEach(function(id){$(id).addEventListener("input",render);});
+  setLang(start,false);
+})();
+</script>
+</body>
+</html>
