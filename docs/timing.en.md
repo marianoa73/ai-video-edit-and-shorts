@@ -37,6 +37,18 @@ python3 src/estimate.py 30 --encoder x264 --chroma --subtitles
 python3 src/estimate.py 60 --shorts 8 --json
 ```
 
+## Is it fast enough?
+
+For someone publishing **one video a day**, yes: the work happens overnight and the person only spends the review minutes.
+
+| Daily routine | Machine time, typical (range) | Fits an 8 h night? |
+|---|---|---|
+| 10 min video, 2 shorts | 30 min (19 – 48 min) | yes, with a wide margin |
+| 30 min video, 5 shorts | 1 h 25 min (55 min – 2 h 17 min) | yes |
+| 60 min video, 8 shorts | 2 h 43 min (1 h 46 min – 4 h 22 min) | yes, even at the high end |
+
+The cost of home hardware is waiting, not quality. If a result is needed within the hour, a faster machine is the answer; for a nightly routine, it is not needed.
+
 ## Where the time goes
 
 Transcription and shorts are the two big blocks. Switching to Whisper *small* or fewer shorts changes the total the most; a discrete GPU would shrink transcription and encoding.

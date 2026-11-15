@@ -33,3 +33,26 @@ python3 src/estimate.py 30 --shorts 5      # know the cost before starting
 python3 src/cuts.py transcript.json > cuts.json
 # review cuts.json, edit it, approve, then render
 ```
+
+## Overnight scheduling
+
+The worker starts in a night window and runs at the lowest priority, so the computer is free during the day. A systemd timer and service are enough (example, adapt the paths):
+
+```ini
+# edit-night.timer
+[Timer]
+OnCalendar=*-*-* 23:30
+Persistent=true
+[Install]
+WantedBy=timers.target
+
+# edit-night.service
+[Service]
+Type=oneshot
+Nice=19
+IOSchedulingClass=idle
+TimeoutStartSec=7h
+ExecStart=/usr/bin/python3 /path/to/worker.py --queue
+```
+
+Jobs wait in the queue; the worker takes one at a time and stops before the morning limit, leaving the rest for the next night. Nothing is published by the worker: in the morning a person reviews and approves.

@@ -4,6 +4,10 @@
 
 ![Hardware](assets/02-hardware.en.svg)
 
+## Standard home hardware
+
+The proposal deliberately uses ordinary home equipment, not a workstation: the finished video is 1080p and the price paid is processing time, which is absorbed by running overnight (see [timing](timing.en.md) and [modes](modes.en.md)).
+
 ## Reference machine
 
 | Part | Proposal | Why |

@@ -4,6 +4,10 @@
 
 ![Hardware](assets/02-hardware.es.svg)
 
+## Hardware estándar hogareño
+
+La propuesta usa a propósito equipos comunes de casa, no una estación de trabajo: el video terminado es 1080p y lo que se paga es tiempo de procesamiento, que se absorbe corriendo de noche (ver [tiempos](timing.md) y [modos](modes.md)).
+
 ## Máquina de referencia
 
 | Parte | Propuesta | Por qué |

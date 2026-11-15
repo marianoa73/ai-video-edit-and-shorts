@@ -29,6 +29,15 @@ Autor: Mariano Araujo · Licencia MIT · [English version](README.md)
 
 [PNG en alta resolución](docs/assets/01-pipeline.es.png?v=3) · [English version](README.md)
 
+## Pensado para hardware hogareño
+
+Todo está construido para entregar video terminado en **1080p** con **hardware estándar de uso hogareño**: una máquina Linux x86 chica, sin GPU dedicada y sin servicios en la nube. La grabación en 4K es el origen; el resultado sale en 1080p. El compromiso es explícito: **se mantienen la calidad y la privacidad, y lo que se paga es tiempo.** El procesamiento es más lento que en una estación de trabajo o un editor en la nube, por eso el diseño supone que corre **sin supervisión, de noche**.
+
+- **Entra en una rutina diaria:** según las estimaciones, un video diario de 10 minutos necesita unos 30 minutos de máquina y uno de 30 minutos unas 1 h 25 min con cinco shorts, muy dentro de una ventana nocturna de 8 horas.
+- **No molesta:** un trabajo a la vez, baja prioridad de CPU y disco, iniciado en horario nocturno, así la misma computadora queda libre para el trabajo del día.
+- **Poco tiempo humano:** unos 8 minutos para aprobar la lista de cortes más cerca de 1 minuto por short.
+- **Números honestos:** todos los tiempos son estimaciones hasta medir el prototipo en la máquina de destino.
+
 ## Qué hace
 
 | Paso | Qué pasa | Dónde corre |

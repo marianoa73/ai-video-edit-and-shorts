@@ -33,3 +33,26 @@ python3 src/estimate.py 30 --shorts 5      # saber el costo antes de empezar
 python3 src/cuts.py transcript.json > cuts.json
 # revisar cuts.json, editarlo, aprobar y recién ahí renderizar
 ```
+
+## Programación nocturna
+
+El trabajador arranca en una ventana nocturna y corre con la prioridad más baja, así la computadora queda libre durante el día. Alcanza con un timer y un servicio de systemd (ejemplo, adaptá las rutas):
+
+```ini
+# edit-night.timer
+[Timer]
+OnCalendar=*-*-* 23:30
+Persistent=true
+[Install]
+WantedBy=timers.target
+
+# edit-night.service
+[Service]
+Type=oneshot
+Nice=19
+IOSchedulingClass=idle
+TimeoutStartSec=7h
+ExecStart=/usr/bin/python3 /path/to/worker.py --queue
+```
+
+Los trabajos esperan en la cola; el trabajador toma uno a la vez y se detiene antes del límite de la mañana, dejando el resto para la noche siguiente. El trabajador no publica nada: a la mañana una persona revisa y aprueba.

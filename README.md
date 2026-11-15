@@ -29,6 +29,15 @@ Author: Mariano Araujo · MIT License · [Versión en español](README.es.md)
 
 [High-resolution PNG](docs/assets/01-pipeline.en.png?v=3) · [Versión en español](README.es.md)
 
+## Designed for home hardware
+
+Everything here is built to deliver **1080p** finished video on **standard home hardware**: a small x86 Linux machine, no discrete GPU and no cloud service. The 4K recording is the source; the result is 1080p. The trade-off is explicit: **quality and privacy are kept, and the price is time.** Processing is slower than on a workstation or a cloud editor, so the design assumes it runs **unattended, overnight**.
+
+- **Fits a daily routine:** by the estimates, a 10-minute daily video needs about 30 minutes of machine time and a 30-minute video about 1 h 25 min including five shorts, well inside an 8-hour night window.
+- **Stays out of the way:** one job at a time, low CPU and disk priority, started in a night window, so the same computer remains free for daily work.
+- **Little human time:** about 8 minutes to approve the cut list plus about 1 minute per short.
+- **Honest numbers:** all times are estimates until the prototype is measured on the target machine.
+
 ## What it does
 
 | Step | What happens | Where it runs |
