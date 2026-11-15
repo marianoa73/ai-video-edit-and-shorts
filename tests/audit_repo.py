@@ -28,7 +28,7 @@ for p in ROOT.rglob('*'):
         for href in re.findall(r'\]\(([^)]+)\)', text):
             if ':' in href or href.startswith('#'):
                 continue
-            if not (p.parent / href.split('#')[0]).exists():
+            if not (p.parent / href.split('#')[0].split('?')[0]).exists():
                 fail.append(f'{rel}: missing link {href}')
 for name in ['README.md', 'README.es.md', 'CONTRIBUTORS.md', 'LICENSE', 'NOTICE.md', 'SECURITY.md', 'CHANGELOG.md', 'docs/index.html', 'docs/.nojekyll',
              'docs/data/timing-model.json', 'src/estimate.py', 'src/cuts.py', 'skill/ai-video-edit-and-shorts/SKILL.md']:

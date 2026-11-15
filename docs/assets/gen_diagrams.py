@@ -11,7 +11,7 @@ OUT = Path(__file__).resolve().parent
 sys.path.insert(0, str(OUT.parents[1] / "src"))
 import estimate  # noqa: E402
 
-BG, BOX, FG, MUTED, ACCENT, LINE = '#0F1115', '#202630', '#EDF0F4', '#BBC5D4', '#D2601F', '#596778'
+BG, BOX, FG, MUTED, ACCENT, LINE = '#0F1115', '#202630', '#EDF0F4', '#BBC5D4', '#C0602B', '#596778'
 
 
 class D:

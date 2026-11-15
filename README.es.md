@@ -1,9 +1,9 @@
-<p align="center"><img src="docs/assets/banner.es.png" alt="AI Video Edit & Shorts" width="100%"></p>
+<p align="center"><img src="docs/assets/banner.es.png?v=3" alt="AI Video Edit & Shorts" width="100%"></p>
 
 <p align="center">
-<a href="README.md"><img src="docs/assets/btn-en.svg" height="44" alt="View in English"></a>
+<a href="README.md"><img src="docs/assets/btn-en.svg?v=3" height="44" alt="View in English"></a>
 &nbsp;
-<a href="https://marianoa73.github.io/ai-video-edit-and-shorts/?lang=es"><img src="docs/assets/btn-site-es.svg" height="44" alt="Página interactiva (ES / EN)"></a>
+<a href="https://marianoa73.github.io/ai-video-edit-and-shorts/?lang=es"><img src="docs/assets/btn-site-es.svg?v=3" height="44" alt="Página interactiva (ES / EN)"></a>
 </p>
 
 > *Edición privada y local: de una toma 4K cruda a un video limpio y sus shorts.*
@@ -25,9 +25,9 @@ Autor: Mariano Araujo · Licencia MIT · [English version](README.md)
    python3 src/cuts.py examples/transcript.example.json
    ```
 
-![De una toma cruda a los archivos finales](docs/assets/01-pipeline.es.svg)
+![De una toma cruda a los archivos finales](docs/assets/01-pipeline.es.svg?v=3)
 
-[PNG en alta resolución](docs/assets/01-pipeline.es.png) · [English version](README.md)
+[PNG en alta resolución](docs/assets/01-pipeline.es.png?v=3) · [English version](README.md)
 
 ## Qué hace
 
@@ -39,13 +39,13 @@ Autor: Mariano Araujo · Licencia MIT · [English version](README.md)
 | Aspecto | zoom y paneo sobre el cuadro 4K, fondo verde opcional, subtítulos opcionales | GPU integrada / CPU |
 | Shorts | candidatos propuestos, una persona aprueba, reencuadre 9:16 que sigue la cara; versiones con y sin subtítulos | GPU integrada / CPU |
 
-![Cómo se deciden los cortes](docs/assets/05-cuts.es.svg)
+![Cómo se deciden los cortes](docs/assets/05-cuts.es.svg?v=3)
 
 ## Cuánto tarda (estimaciones)
 
 Para un video de 30 minutos en el mini PC de referencia (4 núcleos / 8 hilos, 32 GB, GPU integrada, sin GPU dedicada): unas **1 h 25 min** de máquina sin supervisión (rango 55 min – 2 h 17 min) incluyendo cinco shorts en dos versiones, más unos 15 minutos de revisión humana. La transcripción y los shorts son lo que más pesa.
 
-![Tiempo de máquina estimado](docs/assets/03-timing.es.svg)
+![Tiempo de máquina estimado](docs/assets/03-timing.es.svg?v=3)
 
 Son **estimaciones, no mediciones**. [Cómo se arman, cómo cambiarlas y cómo medir las tuyas](docs/timing.md).
 
@@ -53,15 +53,15 @@ Son **estimaciones, no mediciones**. [Cómo se arman, cómo cambiarlas y cómo m
 
 Alcanza con una máquina Linux x86 chica; la GPU es una mejora opcional sólo si las mediciones la justifican.
 
-![Hardware y red](docs/assets/02-hardware.es.svg)
+![Hardware y red](docs/assets/02-hardware.es.svg?v=3)
 
 Detalle, dimensionado de almacenamiento y camino de mejora: [docs/hardware.md](docs/hardware.md).
 
 ## Shorts y subtítulos
 
-![Del video largo a los shorts](docs/assets/04-shorts.es.svg)
+![Del video largo a los shorts](docs/assets/04-shorts.es.svg?v=3)
 
-![Ubicación de los subtítulos](docs/assets/06-framing.es.svg)
+![Ubicación de los subtítulos](docs/assets/06-framing.es.svg?v=3)
 
 ## Modos de trabajo
 
