@@ -11,7 +11,7 @@ OUT = Path(__file__).resolve().parent
 sys.path.insert(0, str(OUT.parents[1] / "src"))
 import estimate  # noqa: E402
 
-BG, BOX, FG, MUTED, ACCENT, LINE = '#0F1115', '#202630', '#EDF0F4', '#BBC5D4', '#FD5A02', '#596778'
+BG, BOX, FG, MUTED, ACCENT, LINE = '#0F1115', '#202630', '#EDF0F4', '#BBC5D4', '#D2601F', '#596778'
 
 
 class D:
@@ -179,9 +179,12 @@ def banner(L, T):
     s.text(70, 150, 'AI Video Edit & Shorts', 66, FG, True)
     s.text(70, 235, T['tag'], 25, MUTED)
     s.text(70, 300, T['tag2'], 24, ACCENT, True)
-    for i in range(5):  # tiny timeline motif
-        w = [150, 90, 230, 120, 180][i]; x = 70 + sum([150, 90, 230, 120, 180][:i]) + i * 14
-        s.rect(x, 345, w, 34, BOX, ACCENT if i in (1, 3) else LINE, 8, 2)
+    x = 70
+    for i, (w, lab) in enumerate(zip([170, 110, 250, 110, 190], T['tl'])):  # timeline motif: keep / cut / keep ...
+        cut = i in (1, 3)
+        s.rect(x, 340, w, 44, BG if cut else BOX, ACCENT if cut else LINE, 8, 2)
+        s.text(x + w / 2, 362, lab, 17, ACCENT if cut else MUTED, cut, 'middle')
+        x += w + 14
     s.save(f'banner.{L}')
 
 
@@ -212,6 +215,7 @@ EN = dict(
     t6='06 · Subtitle placement and 9:16 safe zones', s6='Illustration with a neutral silhouette · no real footage is published in this repository',
     ui_top='platform UI (top)', ui_bot='caption + buttons (bottom)', sub1='THE ACTIVE WORD', sub2='IN COLOR',
     notes=[('Top zone', 'keep it free of text'), ('Face', 'tracked; zoom keeps it centered'), ('Subtitles at chest height', 'max 2 lines, bold with outline'), ('Bottom zone', 'covered by the app interface')],
+    tl=['keep', 'cut', 'keep', 'cut', 'keep'],
     tag='Local, private editing of long talking-head videos and the shorts that come out of them.', tag2='Cuts · subtitles · zooms · green screen · shorts — with a person in charge',
 )
 ES = dict(
@@ -241,6 +245,7 @@ ES = dict(
     t6='06 · Ubicación de subtítulos y zonas seguras 9:16', s6='Ilustración con silueta neutra · en este repositorio no se publica material real',
     ui_top='interfaz de la plataforma (arriba)', ui_bot='descripción + botones (abajo)', sub1='LA PALABRA ACTIVA', sub2='EN COLOR',
     notes=[('Zona superior', 'dejarla libre de texto'), ('Cara', 'con seguimiento; el zoom la mantiene centrada'), ('Subtítulos a la altura del pecho', 'máx. 2 líneas, negrita con contorno'), ('Zona inferior', 'la tapa la interfaz de la app')],
+    tl=['queda', 'corte', 'queda', 'corte', 'queda'],
     tag='Edición local y privada de videos largos hablados a cámara y de los shorts que salen de ellos.', tag2='Cortes · subtítulos · zooms · fondo verde · shorts — con una persona al mando',
 )
 
