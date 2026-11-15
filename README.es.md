@@ -78,6 +78,10 @@ FFmpeg (con Quick Sync/VAAPI), faster-whisper, auto-editor o `silencedetect` de 
 - Este repositorio no incluye videos, muestras de voz ni imágenes de caras; las ilustraciones usan una silueta neutra.
 - El pipeline nunca borra los originales.
 
+## Colaboradores
+
+El autor, con Claude, Codex y OpenRouter/OpenCode como asistentes de IA bajo revisión humana. Ver [CONTRIBUTORS.md](CONTRIBUTORS.md).
+
 ## Documentación
 
 | Guía | English | Español |

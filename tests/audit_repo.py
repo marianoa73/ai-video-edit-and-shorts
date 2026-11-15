@@ -30,7 +30,7 @@ for p in ROOT.rglob('*'):
                 continue
             if not (p.parent / href.split('#')[0]).exists():
                 fail.append(f'{rel}: missing link {href}')
-for name in ['README.md', 'README.es.md', 'LICENSE', 'NOTICE.md', 'SECURITY.md', 'CHANGELOG.md', 'docs/index.html', 'docs/.nojekyll',
+for name in ['README.md', 'README.es.md', 'CONTRIBUTORS.md', 'LICENSE', 'NOTICE.md', 'SECURITY.md', 'CHANGELOG.md', 'docs/index.html', 'docs/.nojekyll',
              'docs/data/timing-model.json', 'src/estimate.py', 'src/cuts.py', 'skill/ai-video-edit-and-shorts/SKILL.md']:
     if not (ROOT / name).is_file():
         fail.append(f'missing {name}')

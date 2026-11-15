@@ -15,3 +15,5 @@ MIT cubre el código y el texto propios de este repositorio. No cambia la licenc
 | Intel media driver and libva | permissive licences: [media-driver](https://github.com/intel/media-driver), [libva](https://github.com/intel/libva) |
 | Pillow (diagram script only) | HPND: [project](https://github.com/python-pillow/Pillow) |
 | Python | PSF licence: [python.org](https://docs.python.org/3/license.html) |
+
+Claude, Codex, ChatGPT, OpenRouter, OpenCode, Ollama and the other product names are trademarks of their owners; this project is not affiliated with or endorsed by them. / Claude, Codex, ChatGPT, OpenRouter, OpenCode, Ollama y los demás nombres de productos son marcas de sus dueños; este proyecto no está afiliado a ellos ni respaldado por ellos.

@@ -78,6 +78,10 @@ FFmpeg (with Quick Sync/VAAPI), faster-whisper, auto-editor or FFmpeg `silencede
 - No footage, voice sample or face image is included in this repository; the illustrations use a neutral silhouette.
 - Originals are never deleted by the pipeline.
 
+## Contributors
+
+The author, with Claude, Codex and OpenRouter/OpenCode as AI assistants under human review. See [CONTRIBUTORS.md](CONTRIBUTORS.md).
+
 ## Documentation
 
 | Guide | English | Español |
